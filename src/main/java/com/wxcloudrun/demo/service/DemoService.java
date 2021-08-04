@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
 import java.util.Map;
 
@@ -23,7 +22,7 @@ public class DemoService {
     public Map sayHello(@RequestParam(name = "top") int top) throws Exception {
         System.out.println("top：" + top);
         if (top >= 10) {
-            throw new Exception("top over 10");
+            throw new Exception("top over 10 @Sl4j");
         }
 
         CloseableHttpClient httpclient = HttpClients.createDefault();
